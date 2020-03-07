@@ -160,7 +160,7 @@ class board:
     ##################################
     def get_last_move(self):
         if len(self.__history) > 0:
-            print("......", self.__history[-1])
+            # print("......", self.__history[-1])
             return self.__history[-1]['mark'], self.__history[-1]['move']
         return None, (-1, -1)
 

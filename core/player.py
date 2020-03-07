@@ -211,50 +211,6 @@ class player:
             print("{} - num series {}".format(key, len(value)))
             print(value)
 
-# def _test_play(n_times):
-#     my_board = board.board()
-#     my_board.verbose = False
-#     fin_moves = []
-#     wins = {}
-#     wins[my_board.mark_player_1] = 0
-#     wins[my_board.mark_player_2] = 0
-
-#     for trial in range(n_times):
-#         my_board.reset()
-
-#         evaluators1 = [
-#             {'fn': eval_func.own_bingo,          'weight': 5.0},
-#             {'fn': eval_func.opp_bingo,          'weight': 5.0},
-#             {'fn': eval_func.own_almost_bingo,   'weight': 2.0},
-#             {'fn': eval_func.opp_almost_bingo,   'weight': 2.0},
-#             #{'fn': eval_func.freedom,            'weight': 1.0},
-#             {'fn': eval_func.center,             'weight': 1.0},
-#         ]
-#         p1 = player(my_board, my_board.player_1, my_board.mark_player_1, evaluators1)
-
-#         evaluators2 = [
-#             {'fn': eval_func.own_bingo,          'weight': 5.0},
-#             {'fn': eval_func.opp_bingo,          'weight': 5.0},
-#             {'fn': eval_func.own_almost_bingo,   'weight': 2.0},
-#             {'fn': eval_func.opp_almost_bingo,   'weight': 2.0},
-#             #{'fn': eval_func.freedom,            'weight': 1.0},
-#             {'fn': eval_func.center,             'weight': 1.0},
-#         ]
-
-#         p2 = player(my_board, my_board.player_2, my_board.mark_player_2, evaluators2)
-#         players = [p1, p2]
-#         for i in range(100):
-#             p = players[i % 2]
-#             p.move()
-#             if my_board.finished():
-#                 #board.print_board()
-#                 print("{} === PLAYER {} WINS === {}".format(trial, p.mark(), i))
-#                 fin_moves.append(i)
-#                 wins[p.mark()] += 1
-#                 break
-#     my_board.print_board()
-#     print("avg moves: {}, wins: {}".format(sum(fin_moves) / float(len(fin_moves)), wins))
-
 def _test_print_jump_table():
     my_board = board.board()
     p1 = player(my_board, my_board.player_1, my_board.mark_player_1)

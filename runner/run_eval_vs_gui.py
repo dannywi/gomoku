@@ -50,9 +50,9 @@ def _test_play():
                 # let the other player move, and update GUI if move succeeds
                 if auto_player.move():
                     player, (row, col) = board.get_last_move()
-                    print(player, col, row)
+                    # print(player, col, row)
                     gui_board.put_stone(row, col, "white")
-                    board.print_board()
+                    # board.print_board()   # uncomment to see if gui and board are in synch
             
             # stop futher gui updates
             if board.finished() is True:
